@@ -26,7 +26,6 @@
           data-netlify="true"
           action="/thank-you.html"
         >
-                  
           <label>
             Your Name
             <input type="text" name="name" required />
