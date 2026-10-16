@@ -26,8 +26,7 @@
           data-netlify="true"
           action="/thank-you.html"
         >
-          <!-- Honeypot (bots may fill this in) -->
-          
+                  
           <label>
             Your Name
             <input type="text" name="name" required />
