@@ -1,108 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Georgia', serif;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request a Deposition</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-body {
-  background-color: #f9f9f7;
-  color: #222;
-  line-height: 1.6;
-}
+  <body>
+    <header>
+      <h1>Request a Deposition</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/portal.html">Portal</a>
+      </nav>
+    </header>
 
-header {
-  background-color: #355E3B;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
+    <main>
+      <section>
+        <h2>Submit Your Request</h2>
 
-header h1 {
-  font-size: 2rem;
-}
+        <form
+          name="deposition-request"
+          method="POST"
+          data-netlify="true"
+          action="/thank-you.html"
+        >
+          <!-- Honeypot (bots may fill this in) -->
+          <p style="display:none" aria-hidden="true">
+            <label>
+              Don't fill this out if you're human:
+              <input type="text" name="bot-field" />
+            </label>
+          </p>
 
-nav {
-  margin-top: 1rem;
-}
+          <label>
+            Your Name
+            <input type="text" name="name" required />
+          </label>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-}
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
 
-nav a:hover {
-  text-decoration: underline;
-}
+          <label>
+            Phone (optional)
+            <input type="tel" name="phone" />
+          </label>
 
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+          <label>
+            Case / Matter (optional)
+            <input type="text" name="case" />
+          </label>
 
-section {
-  margin-bottom: 2.5rem;
-}
+          <label>
+            Details of Request
+            <textarea name="details" rows="6" required></textarea>
+          </label>
 
-h2 {
-  color: #355E3B;
-  border-bottom: 2px solid #d4af37;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
-}
+          <button type="submit">Submit Request</button>
+        </form>
+      </section>
+    </main>
 
-.services ul {
-  list-style: none;
-}
+    <footer>
+      <p>&copy; <span id="year"></span> Your Company</p>
+    </footer>
 
-.services li {
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #355E3B;
-  color: white;
-  margin-top: 2rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-}
-
-input, textarea {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-button {
-  background-color: #355E3B;
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #d4af37;
-  color: #355E3B;
-}
-
-<p style="display:none" aria-hidden="true">
-  <label>
-    Don't fill this out if you're human:
-    <input type="text" name="bot-field" />
-  </label>
-</p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
