@@ -102,6 +102,5 @@ button:hover {
 
 /* Hide honeypot spam field from real visitors */
 .hidden {
-  position: absolute;
-  left: -9999px;
+  display: none;
 }
