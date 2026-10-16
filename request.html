@@ -20,16 +20,20 @@
   <main>
     <section>
       <h2>Request a Deposition</h2>
-      <form name="deposition-request" method="POST" data-netlify="true">
+      <form name="deposition-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
         <input type="hidden" name="form-name" value="deposition-request" />
 
-        <label for="name">Full Name</label>
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <label for="name">Full Name *</label>
         <input type="text" id="name" name="name" required>
 
         <label for="firm">Law Firm / Company</label>
         <input type="text" id="firm" name="firm">
 
-        <label for="email">Email</label>
+        <label for="email">Email *</label>
         <input type="email" id="email" name="email" required>
 
         <label for="phone">Phone Number</label>
