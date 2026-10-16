@@ -99,3 +99,9 @@ button:hover {
   background-color: #d4af37;
   color: #1a1a2e;
 }
+
+/* Hide honeypot spam field from real visitors */
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
