@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Deposition | [Your Business Name]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>[Your Business Name]</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="request.html">Request a Deposition</a>
+      <a href="portal.html">Transcript Portal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Request a Deposition</h2>
+      <form name="deposition-request" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="deposition-request" />
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="firm">Law Firm / Company</label>
+        <input type="text" id="firm" name="firm">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date">
+
+        <label for="location">Deposition Location</label>
+        <input type="text" id="location" name="location">
+
+        <label for="details">Additional Details</label>
+        <textarea id="details" name="details" rows="5"></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 [Your Business Name]. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
