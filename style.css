@@ -100,7 +100,8 @@ button:hover {
   color: #355E3B;
 }
 
-/* Hide honeypot spam field from real visitors */
-.hidden {
-  display: none;
-}
+<p class="hidden">
+  <label>Don't fill this out if you're human:
+    <input type="text" name="bot-field" />
+  </label>
+</p>
