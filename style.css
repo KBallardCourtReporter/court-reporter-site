@@ -1,67 +1,133 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Request a Deposition</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <body>
-    <header>
-      <h1>Request a Deposition</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/portal.html">Portal</a>
-      </nav>
-    </header>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f9f8;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
 
-    <main>
-      <section>
-        <h2>Submit Your Request</h2>
+/* ===== Header ===== */
+header {
+  background-color: #1b4332;
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
 
-        <form
-          name="deposition-request"
-          method="POST"
-          data-netlify="true"
-          action="/thank-you.html"
-        >
-          <label>
-            Your Name
-            <input type="text" name="name" required />
-          </label>
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
 
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
+nav a {
+  color: #d8f3dc;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 600;
+}
 
-          <label>
-            Phone (optional)
-            <input type="tel" name="phone" />
-          </label>
+nav a:hover {
+  text-decoration: underline;
+  color: white;
+}
 
-          <label>
-            Case / Matter (optional)
-            <input type="text" name="case" />
-          </label>
+/* ===== Main Content ===== */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+}
 
-          <label>
-            Details of Request
-            <textarea name="details" rows="6" required></textarea>
-          </label>
+section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
 
-          <button type="submit">Submit Request</button>
-        </form>
-      </section>
-    </main>
+h2 {
+  color: #1b4332;
+  margin-bottom: 1rem;
+}
 
-    <footer>
-      <p>&copy; <span id="year"></span> Your Company</p>
-    </footer>
+p {
+  margin-bottom: 1rem;
+}
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
-</html>
+/* ===== Forms ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+input,
+textarea {
+  margin-top: 0.4rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.2);
+}
+
+button {
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #1b4332;
+}
+
+/* ===== Hide Honeypot Field ===== */
+.hidden {
+  position: absolute;
+  left: -5000px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1b4332;
+  color: #d8f3dc;
+  margin-top: 3rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: #2d6a4f;
+}
+
+a:hover {
+  color: #1b4332;
+}
